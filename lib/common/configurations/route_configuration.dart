@@ -5,9 +5,10 @@ import 'package:template_app/views/screens/about_screen.dart';
 import 'package:template_app/views/screens/account_screen.dart';
 import 'package:template_app/views/screens/authentications/authentication_screen.dart';
 import 'package:template_app/views/screens/credits_screen.dart';
+import 'package:template_app/views/screens/presentation/presentation_screen.dart';
 import 'package:template_app/views/screens/tests/form_divers_screen.dart';
 import 'package:template_app/views/screens/home_screen.dart';
-import 'package:template_app/views/screens/splash_screen.dart';
+import 'package:template_app/views/screens/splash/splash_screen.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
@@ -18,6 +19,10 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: RoutesConstant.kRouteSplash,
       builder: (context, state) => const SplashScreen(),
+    ),
+    GoRoute(
+      path: RoutesConstant.kRoutePresentation,
+      builder: (context, state) => const PresentationScreen(),
     ),
     GoRoute(
       path: RoutesConstant.kRouteAuthentication,

@@ -16,6 +16,7 @@ class TextsConstant {
   static const String kBtnNo = "No";
   static const String kBtnSave = "Save";
   static const String kBtnReset = "Reset";
+  static const String kBtnGetStarted = "Let's Get Started";
 
   static const String kTitleScreenAbout = "about";
   static const String kTitleScreenCredits = "credits";
@@ -47,4 +48,8 @@ class TextsConstant {
   static const String kAuthenticationSignOut = "sign out";
   static const String kAuthenticationSignInQuestion = "Already have an account?";
   static const String kAuthenticationSignUpQuestion = "Need an account?";
+
+  static const String kPresentationDescription1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+  static const String kPresentationDescription2 = "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  static const String kPresentationDescription3 = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
 }

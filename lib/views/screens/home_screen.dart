@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return MenuCard(
                     title: listHomeMenu[index].title,
-                    onTap: () => GoRouter.of(context).go(listHomeMenu[index].route),
+                    onTap: () => context.go(listHomeMenu[index].route),
                   );
                 },
               ),

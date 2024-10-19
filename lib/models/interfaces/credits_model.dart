@@ -12,5 +12,6 @@ final List<CreditsModel> listCredits = [
   CreditsModel(name: "FlatIcon", url: Uri.parse("https://www.flaticon.com/")),
   CreditsModel(name: "FlatIcon - DinosoftLabs", url: Uri.parse("https://www.flaticon.com/authors/dinosoftlabs")),
   CreditsModel(name: "FlatIcon - Freepik", url: Uri.parse("https://www.flaticon.com/authors/freepik")),
+  CreditsModel(name: "FlatIcon - Surfsup.Vector", url: Uri.parse("https://www.flaticon.com/authors/surfsupvector")),
   // ...
 ];

@@ -3,6 +3,7 @@ class RoutesConstant {
 
   static const String kRouteInitialLocation = "/";
   static const String kRouteSplash = "/";
+  static const String kRoutePresentation = "/presentation";
   static const String kRouteAuthentication = "/authentication";
   static const String kRouteHome = "/home";
   static const String kRouteAbout = "/about";

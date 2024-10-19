@@ -13,8 +13,11 @@ Développement en cours ... vidéo en cours de production.
 ## Capture d'écran
 
 ![SplashScreen](/markdow/01.png "Splash")
-![SignUp](/markdow/02.png "SignUp")
-![SignIn](/markdow/03.png "SignIn")
-![About](/markdow/04.png "About")
-![Credits](/markdow/05.png "Credits")
-![Account](/markdow/06.png "Account")
+![Intro1](/markdow/02.png "Intro1")
+![Intro2](/markdow/03.png "Intro2")
+![Intro3](/markdow/04.png "Intro3")
+![SignUp](/markdow/05.png "SignUp")
+![SignIn](/markdow/06.png "SignIn")
+![About](/markdow/07.png "About")
+![Credits](/markdow/08.png "Credits")
+![Account](/markdow/09.png "Account")

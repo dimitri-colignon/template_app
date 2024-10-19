@@ -20,7 +20,7 @@ class AccountScreen extends StatelessWidget {
           children: <Widget>[
             const BackgroundAppBar(),
             const TitleAppBar(),
-            ButtonBackAppBar(onPressed: () => GoRouter.of(context).go(RoutesConstant.kRouteHome)),
+            ButtonBackAppBar(onPressed: () => context.go(RoutesConstant.kRouteHome)),
             const ButtonSignOutAppBar(),
             Positioned(
               left: 0.0,
