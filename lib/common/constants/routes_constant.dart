@@ -5,11 +5,6 @@ class RoutesConstant {
   static const String kRouteSplash = "/";
   static const String kRoutePresentation = "/presentation";
   static const String kRouteAuthentication = "/authentication";
-  static const String kRouteHome = "/home";
-  static const String kRouteAbout = "/about";
-  static const String kRouteCredits = "/credits";
-  static const String kRouteAccount = "/account";
-
-  // Ici c'est pour mes tests.
-  static const String kRouteFormDivers = "/formDivers";
+  static const String kRouteMain = "/main";
+  static const String kRouteInformation = "/information";
 }

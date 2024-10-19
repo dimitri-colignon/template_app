@@ -130,7 +130,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                                     await StorageService.setBool(key: StorageService.kUserConnected, value: true);
                                     if (!context.mounted) return;
                                     EasyLoading.dismiss();
-                                    GoRouter.of(context).go(RoutesConstant.kRouteHome);
+                                    GoRouter.of(context).go(RoutesConstant.kRouteMain);
                                   } else {
                                     await AuthenticationController.signUp(context: context, email: _email, fullName: _fullName, password: _password);
                                     if (!context.mounted) return;

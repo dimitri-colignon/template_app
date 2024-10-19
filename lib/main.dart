@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:provider/provider.dart';
 import 'package:template_app/common/configurations/env_configuration.dart';
 import 'package:template_app/common/configurations/route_configuration.dart';
 import 'package:template_app/common/constants/abouts_constant.dart';
 import 'package:template_app/common/themes/colors_theme.dart';
 import 'package:template_app/common/themes/datas_theme.dart';
-import 'package:template_app/providers/presentation_provider.dart';
 import 'package:template_app/services/storage_service.dart';
 
 void main() async {
@@ -29,13 +27,7 @@ void main() async {
       DeviceOrientation.portraitDown,
     ],
   ).then((value) {
-    runApp(MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => PresentationProvider()),
-        // ...
-      ],
-      child: const MyApp(),
-    ));
+    runApp(const MyApp());
 
     EasyLoading.instance
       ..userInteractions = false

@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:page_view_dot_indicator/page_view_dot_indicator.dart';
-import 'package:provider/provider.dart';
 import 'package:template_app/common/constants/assets_constant.dart';
 import 'package:template_app/common/constants/texts_constant.dart';
 import 'package:template_app/common/themes/buttons_theme.dart';
 import 'package:template_app/common/themes/colors_theme.dart';
-import 'package:template_app/providers/presentation_provider.dart';
 import 'package:template_app/views/screens/presentation/pages/presentation_page.dart';
 import 'package:template_app/views/widgets/scaffold/app_bar/background_line_top_bar.dart';
 import 'package:template_app/views/widgets/scaffold/bottom_bar/background_line_bottom_bar.dart';
@@ -20,10 +18,16 @@ class PresentationScreen extends StatefulWidget {
 
 class _PresentationScreenState extends State<PresentationScreen> {
   late final PageController _pageController;
+  int _currentPage = 0;
+  final List<Widget> _listPresentation = const [
+    PresentationPage(imagePath: AssetsConstant.kPathSmartphone1, title: "title bla bla bla", description: TextsConstant.kPresentationDescription1),
+    PresentationPage(imagePath: AssetsConstant.kPathSmartphone2, title: "title bla bla bla", description: TextsConstant.kPresentationDescription2),
+    PresentationPage(imagePath: AssetsConstant.kPathSmartphone3, title: "title bla bla bla", description: TextsConstant.kPresentationDescription3, withBtnNextScreen: true),
+  ];
 
   @override
   void initState() {
-    _pageController = PageController(initialPage: context.read<PresentationProvider>().selectedPage);
+    _pageController = PageController(initialPage: _currentPage);
     super.initState();
   }
 
@@ -44,12 +48,8 @@ class _PresentationScreenState extends State<PresentationScreen> {
                 color: ColorsTheme.kGreyLight,
                 child: PageView(
                   controller: _pageController,
-                  onPageChanged: (page) => context.read<PresentationProvider>().setSelectedPage = page,
-                  children: const [
-                    PresentationPage(imagePath: AssetsConstant.kPathSmartphone1, title: "title", subTitle: "subTitle", description: TextsConstant.kPresentationDescription1),
-                    PresentationPage(imagePath: AssetsConstant.kPathSmartphone2, title: "title", subTitle: "subTitle", description: TextsConstant.kPresentationDescription2),
-                    PresentationPage(imagePath: AssetsConstant.kPathSmartphone3, title: "title", subTitle: "subTitle\nGet started", description: TextsConstant.kPresentationDescription3, withBtnNextScreen: true),
-                  ],
+                  onPageChanged: (page) => setState(() => _currentPage = page),
+                  children: _listPresentation,
                 ),
               ),
             ),
@@ -61,18 +61,18 @@ class _PresentationScreenState extends State<PresentationScreen> {
                 children: <Widget>[
                   SizedBox(
                     width: 50.0,
-                    child: context.watch<PresentationProvider>().selectedPage == 0
-                        ? const SizedBox.shrink() //const FaIcon(FontAwesomeIcons.circleRight, color: ColorsTheme.kBlueLight, size: 24.0)
+                    child: _currentPage == 0
+                        ? const SizedBox.shrink()
                         : IconButton(
                             style: ButtonsTheme.iconButtonCircle,
-                            onPressed: () => _pageController.animateToPage(context.read<PresentationProvider>().selectedPage - 1, duration: const Duration(milliseconds: 200), curve: Curves.easeIn),
+                            onPressed: () => _pageController.animateToPage(_currentPage - 1, duration: const Duration(milliseconds: 200), curve: Curves.easeIn),
                             icon: const FaIcon(FontAwesomeIcons.caretLeft, size: 24.0),
                           ),
                   ),
                   Expanded(
                     child: PageViewDotIndicator(
-                      currentItem: context.watch<PresentationProvider>().selectedPage,
-                      count: 3,
+                      currentItem: _currentPage,
+                      count: _listPresentation.length,
                       unselectedColor: ColorsTheme.kPrimary,
                       selectedColor: ColorsTheme.kBlueDark,
                       boxShape: BoxShape.rectangle,
@@ -82,11 +82,11 @@ class _PresentationScreenState extends State<PresentationScreen> {
                   ),
                   SizedBox(
                     width: 50.0,
-                    child: context.watch<PresentationProvider>().selectedPage == 2
-                        ? const SizedBox.shrink() //const FaIcon(FontAwesomeIcons.circleRight, color: ColorsTheme.kBlueLight, size: 24.0)
+                    child: _currentPage == _listPresentation.length - 1
+                        ? const SizedBox.shrink()
                         : IconButton(
                             style: ButtonsTheme.iconButtonCircle,
-                            onPressed: () => _pageController.animateToPage(context.read<PresentationProvider>().selectedPage + 1, duration: const Duration(milliseconds: 200), curve: Curves.easeIn),
+                            onPressed: () => _pageController.animateToPage(_currentPage + 1, duration: const Duration(milliseconds: 200), curve: Curves.easeIn),
                             icon: const FaIcon(FontAwesomeIcons.caretRight, size: 24.0),
                           ),
                   ),

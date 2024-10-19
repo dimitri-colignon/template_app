@@ -14,7 +14,7 @@ class ButtonBackAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       left: 20.0,
-      top: 50.0,
+      top: 40.0,
       child: IconButton(
         style: ButtonsTheme.iconButtonSquare,
         icon: const Icon(Icons.arrow_back),

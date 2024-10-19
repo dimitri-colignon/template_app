@@ -18,6 +18,7 @@ class TextsConstant {
   static const String kBtnReset = "Reset";
   static const String kBtnGetStarted = "Let's Get Started";
 
+  static const String kTitleScreenHome = "home";
   static const String kTitleScreenAbout = "about";
   static const String kTitleScreenCredits = "credits";
   static const String kTitleScreenAccount = "account";
@@ -25,6 +26,8 @@ class TextsConstant {
   static const String kTitleScreenFormDivers = "form test";
 
   static const String kTooltipButtonBack = "Back";
+  static const String kTooltipButtonInformations = "Informations";
+  static const String kTooltipButtonSignOut = "Sign out";
 
   static const String kAppName = "name";
   static const String kAppVersion = "version";
@@ -34,6 +37,7 @@ class TextsConstant {
 
   static const String kFormLabel = "enter your %1!";
   static const String kFormValidator = "enter your valid %1!";
+  static const String kFormEnterText = "enter your text!";
 
   static const String kFullname = "fullname";
   static const String kEmail = "email";

@@ -41,7 +41,7 @@ class _SplashScreenState extends State<SplashScreen> {
           if (StorageService.getBool(key: StorageService.kUserConnected) == null) {
             GoRouter.of(context).go(RoutesConstant.kRoutePresentation);
           } else {
-            GoRouter.of(context).go(RoutesConstant.kRouteHome);
+            GoRouter.of(context).go(RoutesConstant.kRouteMain);
           }
         });
       } else {

@@ -59,7 +59,7 @@ class _FormDiversScreenState extends State<FormDiversScreen> {
           children: <Widget>[
             const BackgroundAppBar(),
             const TitleAppBar(),
-            ButtonBackAppBar(onPressed: () => GoRouter.of(context).go(RoutesConstant.kRouteHome)),
+            ButtonBackAppBar(onPressed: () => context.go(RoutesConstant.kRouteMain)),
             Positioned(
               left: 0.0,
               top: 110.0,

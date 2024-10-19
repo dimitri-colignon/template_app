@@ -16,13 +16,11 @@ class ButtonSignOutAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: 50.0,
+      top: 40.0,
       right: 20.0,
-      child: FilledButton.icon(
-        style: ButtonsTheme.filledButtonSquare,
+      child: IconButton(
+        style: ButtonsTheme.iconButtonSquare,
         icon: const FaIcon(FontAwesomeIcons.rightFromBracket),
-        iconAlignment: IconAlignment.end,
-        label: Text(TextsConstant.kAuthenticationSignOut.toUpperCase()),
         onPressed: () async {
           try {
             EasyLoading.show(status: "${TextsConstant.kAuthenticationSignOut.capitalize()} ...");
@@ -36,6 +34,7 @@ class ButtonSignOutAppBar extends StatelessWidget {
             SnackBarMessage.show(context: context, typeMessage: TypeMessage.typeError, message: e.toString());
           }
         },
+        tooltip: TextsConstant.kTooltipButtonSignOut,
       ),
     );
   }

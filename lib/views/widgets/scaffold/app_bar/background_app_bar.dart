@@ -6,7 +6,7 @@ class BackgroundAppBar extends StatelessWidget {
 
   const BackgroundAppBar({
     super.key,
-    this.height = 75.0,
+    this.height = 65.0,
   });
 
   @override
