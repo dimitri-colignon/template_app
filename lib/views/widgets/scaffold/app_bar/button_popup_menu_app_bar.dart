@@ -15,6 +15,9 @@ import 'package:template_app/controllers/authentication_controller.dart';
 class ButtonPopupMenuAppBar extends StatelessWidget {
   const ButtonPopupMenuAppBar({super.key});
 
+  // Pour le test.
+  static const int _count = 3;
+
   @override
   Widget build(BuildContext context) {
     return Positioned(
@@ -22,15 +25,34 @@ class ButtonPopupMenuAppBar extends StatelessWidget {
       right: 20.0,
       child: PopupMenuButton<TypeMenuPopup>(
         style: ButtonsTheme.iconButtonSquare,
-        icon: const Icon(Icons.more_vert),
+        icon: (_count <= 0)
+            ? const Icon(Icons.more_vert)
+            : Badge.count(
+                count: _count,
+                child: const Icon(Icons.more_vert),
+              ),
         onSelected: (TypeMenuPopup item) {},
         itemBuilder: (BuildContext context) {
           return <PopupMenuEntry<TypeMenuPopup>>[
             PopupMenuItem<TypeMenuPopup>(
+              value: TypeMenuPopup.typeNotifier,
+              child: ListTile(
+                onTap: () {},
+                leading: (_count <= 0)
+                    ? const Icon(Icons.notifications, size: 20.0)
+                    : Badge.count(
+                        count: _count,
+                        child: const Icon(Icons.notifications, size: 20.0),
+                      ),
+                title: const Text(TextsConstant.kPopupBtnNotification),
+              ),
+            ),
+            const PopupMenuDivider(height: 0.2),
+            PopupMenuItem<TypeMenuPopup>(
               value: TypeMenuPopup.typeInformation,
               child: ListTile(
                 onTap: () => context.push(RoutesConstant.kRouteInformation),
-                leading: const FaIcon(FontAwesomeIcons.info, size: 16.0),
+                leading: const Icon(FontAwesomeIcons.info, size: 20.0),
                 title: const Text(TextsConstant.kPopupBtnInformation),
               ),
             ),
@@ -53,7 +75,7 @@ class ButtonPopupMenuAppBar extends StatelessWidget {
                     SnackBarMessage.show(context: context, typeMessage: TypeMessage.typeError, message: e.toString());
                   }
                 },
-                leading: const FaIcon(FontAwesomeIcons.rightFromBracket, size: 16.0),
+                leading: const Icon(FontAwesomeIcons.rightFromBracket, size: 20.0),
                 title: const Text(TextsConstant.kPopupBtnDisconnection),
               ),
             ),

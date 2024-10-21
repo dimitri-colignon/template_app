@@ -43,7 +43,7 @@ class TextFormFieldEmail extends StatelessWidget {
           hintText: TextsConstant.kEmail,
           prefixIcon: const Padding(
             padding: EdgeInsets.all(10.0),
-            child: FaIcon(FontAwesomeIcons.at),
+            child: Icon(FontAwesomeIcons.at, size: 20.0),
           ),
         ),
         keyboardType: TextInputType.emailAddress,

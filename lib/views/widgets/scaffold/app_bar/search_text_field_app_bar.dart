@@ -42,7 +42,7 @@ class _SearchTextFieldAppBarState extends State<SearchTextFieldAppBar> {
               alignment: Alignment.center,
               child: GestureDetector(
                 onTap: () => widget.onSubmitted(_searchController.text),
-                child: const FaIcon(
+                child: const Icon(
                   FontAwesomeIcons.magnifyingGlass,
                   color: ColorsTheme.kBlack,
                   size: 20.0,
@@ -57,7 +57,7 @@ class _SearchTextFieldAppBarState extends State<SearchTextFieldAppBar> {
                   _searchController.text = "";
                   widget.onSubmitted("");
                 },
-                child: const FaIcon(
+                child: const Icon(
                   FontAwesomeIcons.xmark,
                   color: ColorsTheme.kBlack,
                   size: 20.0,

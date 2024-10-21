@@ -17,7 +17,7 @@ class DatasTheme {
       centerTitle: true,
     ),
     textTheme: GoogleFonts.poppinsTextTheme(),
-    dividerTheme: const DividerThemeData(color: ColorsTheme.kPrimary),
+    //dividerTheme: const DividerThemeData(color: ColorsTheme.kPrimary),
     progressIndicatorTheme: const ProgressIndicatorThemeData(color: ColorsTheme.kBlueLight),
     cardTheme: const CardTheme(
       color: ColorsTheme.kOnPrimary,

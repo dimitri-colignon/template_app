@@ -66,7 +66,7 @@ class _PresentationScreenState extends State<PresentationScreen> {
                         : IconButton(
                             style: ButtonsTheme.iconButtonCircle,
                             onPressed: () => _pageController.animateToPage(_currentPage - 1, duration: const Duration(milliseconds: 200), curve: Curves.easeIn),
-                            icon: const FaIcon(FontAwesomeIcons.caretLeft, size: 24.0),
+                            icon: const Icon(FontAwesomeIcons.caretLeft, size: 24.0),
                           ),
                   ),
                   Expanded(
@@ -87,7 +87,7 @@ class _PresentationScreenState extends State<PresentationScreen> {
                         : IconButton(
                             style: ButtonsTheme.iconButtonCircle,
                             onPressed: () => _pageController.animateToPage(_currentPage + 1, duration: const Duration(milliseconds: 200), curve: Curves.easeIn),
-                            icon: const FaIcon(FontAwesomeIcons.caretRight, size: 24.0),
+                            icon: const Icon(FontAwesomeIcons.caretRight, size: 24.0),
                           ),
                   ),
                 ],

@@ -27,7 +27,7 @@ class TextFormFieldFullname extends StatelessWidget {
           hintText: TextsConstant.kFullname,
           prefixIcon: const Padding(
             padding: EdgeInsets.all(10.0),
-            child: FaIcon(FontAwesomeIcons.solidUser),
+            child: Icon(FontAwesomeIcons.solidUser, size: 20.0),
           ),
         ),
       ),

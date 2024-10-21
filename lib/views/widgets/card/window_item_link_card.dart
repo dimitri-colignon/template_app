@@ -30,7 +30,7 @@ class WindowItemLinkCard extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () => LauncherService.launchUri(context: context, url: url),
-            child: const FaIcon(FontAwesomeIcons.globe, color: ColorsTheme.kBlueLight, size: 20.0),
+            child: const Icon(FontAwesomeIcons.globe, color: ColorsTheme.kBlueLight, size: 20.0),
           ),
         ],
       ),

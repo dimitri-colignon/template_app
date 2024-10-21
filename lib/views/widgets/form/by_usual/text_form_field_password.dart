@@ -36,13 +36,13 @@ class _TextFormFieldPasswordState extends State<TextFormFieldPassword> {
           hintText: TextsConstant.kPassword,
           prefixIcon: const Padding(
             padding: EdgeInsets.all(10.0),
-            child: FaIcon(FontAwesomeIcons.key),
+            child: Icon(FontAwesomeIcons.key, size: 20.0),
           ),
           suffixIcon: Padding(
             padding: const EdgeInsets.all(10.0),
             child: GestureDetector(
               onTap: () => setState(() => _obscureTextPassword = !_obscureTextPassword),
-              child: FaIcon(_obscureTextPassword ? FontAwesomeIcons.eye : FontAwesomeIcons.eyeSlash, color: ColorsTheme.kBlueLight),
+              child: Icon(_obscureTextPassword ? FontAwesomeIcons.eye : FontAwesomeIcons.eyeSlash, size: 20.0, color: ColorsTheme.kBlueLight),
             ),
           ),
         ),

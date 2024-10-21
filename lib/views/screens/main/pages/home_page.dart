@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:template_app/common/constants/texts_constant.dart';
 import 'package:template_app/common/extensions/string_extensions.dart';
 import 'package:template_app/views/widgets/scaffold/app_bar/background_app_bar.dart';
-import 'package:template_app/views/widgets/scaffold/app_bar/button_notification_app_bar.dart';
+import 'package:template_app/views/widgets/scaffold/app_bar/button_filter_search_app_bar.dart';
 import 'package:template_app/views/widgets/scaffold/app_bar/button_popup_menu_app_bar.dart';
 import 'package:template_app/views/widgets/scaffold/app_bar/search_text_field_app_bar.dart';
 import 'package:template_app/views/widgets/scaffold/app_bar/title_app_bar.dart';
@@ -20,10 +20,10 @@ class HomePage extends StatelessWidget {
             const TitleAppBar(),
             SearchTextFieldAppBar(
               onSubmitted: (value) {
-                print(value);
+                // print(value);
               },
             ),
-            const ButtonNotificationAppBar(),
+            const ButtonFilterSearchAppBar(),
             const ButtonPopupMenuAppBar(),
             Positioned(
               left: 0.0,

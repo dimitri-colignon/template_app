@@ -20,6 +20,7 @@ class TextsConstant {
   static const String kBtnSkipIntro = "Skip Intro";
   static const String kBtnGetStarted = "Let's Get Started";
 
+  static const String kPopupBtnNotification = "Notifications";
   static const String kPopupBtnInformation = "Information";
   static const String kPopupBtnDisconnection = "Disconnection";
 
@@ -37,6 +38,7 @@ class TextsConstant {
 
   static const String kTooltipButtonBack = "Back";
   static const String kTooltipButtonNotification = "Notifications";
+  static const String kTooltipButtonFilterSearch = "Filter search";
 
   static const String kAppName = "name";
   static const String kAppVersion = "version";
