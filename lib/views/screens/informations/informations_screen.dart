@@ -35,7 +35,7 @@ class InformationsScreen extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     child: WindowCard(
-                      title: TextsConstant.kTitleScreenAbout,
+                      title: TextsConstant.kTitleWindowCardAbout,
                       children: <Widget>[
                         ListView.builder(
                           shrinkWrap: true,
@@ -50,7 +50,7 @@ class InformationsScreen extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),
                     child: WindowCard(
-                      title: TextsConstant.kTitleScreenCredits,
+                      title: TextsConstant.kTitleWindowCardCredits,
                       children: <Widget>[
                         ListView.builder(
                           shrinkWrap: true,

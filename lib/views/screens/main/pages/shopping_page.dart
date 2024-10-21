@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:template_app/common/constants/texts_constant.dart';
 import 'package:template_app/common/extensions/string_extensions.dart';
 import 'package:template_app/views/widgets/scaffold/app_bar/background_app_bar.dart';
-import 'package:template_app/views/widgets/scaffold/app_bar/button_notification_app_bar.dart';
 import 'package:template_app/views/widgets/scaffold/app_bar/button_popup_menu_app_bar.dart';
-import 'package:template_app/views/widgets/scaffold/app_bar/search_text_field_app_bar.dart';
 import 'package:template_app/views/widgets/scaffold/app_bar/title_app_bar.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class ShoppingPage extends StatelessWidget {
+  const ShoppingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +16,6 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             const BackgroundAppBar(),
             const TitleAppBar(),
-            SearchTextFieldAppBar(
-              onSubmitted: (value) {
-                print(value);
-              },
-            ),
-            const ButtonNotificationAppBar(),
             const ButtonPopupMenuAppBar(),
             Positioned(
               left: 0.0,
@@ -33,7 +25,7 @@ class HomePage extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[Center(child: Text(TextsConstant.kTitlePageHome.capitalize()))],
+                  children: <Widget>[Center(child: Text(TextsConstant.kTitlePageShopping.capitalize()))],
                 ),
               ),
             ),

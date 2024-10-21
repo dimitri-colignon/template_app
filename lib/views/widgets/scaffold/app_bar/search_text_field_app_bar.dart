@@ -23,30 +23,45 @@ class _SearchTextFieldAppBarState extends State<SearchTextFieldAppBar> {
   Widget build(BuildContext context) {
     return Positioned(
       left: 20.0,
-      top: 42.5,
+      top: 45.0,
       right: 115.0,
       child: SizedBox(
-        height: 45.0,
+        height: 40.0,
         child: TextField(
+          //onSubmitted: (value) => widget.onSubmitted(value),
           style: TextsTheme.styleInputDecorationDefault,
           controller: _searchController,
           maxLength: 50,
+          textAlignVertical: TextAlignVertical.center,
           decoration: InputDecoration(
             fillColor: ColorsTheme.kGreyLight.withOpacity(0.75),
             counterText: "",
             hintText: TextsConstant.kFormEnterText,
-            prefixIcon: GestureDetector(
-              onTap: () => widget.onSubmitted(_searchController.text),
-              child: const Padding(
-                padding: EdgeInsets.all(10.0),
-                child: FaIcon(FontAwesomeIcons.magnifyingGlass, color: ColorsTheme.kBlack),
+            prefixIcon: Container(
+              width: 26.0,
+              alignment: Alignment.center,
+              child: GestureDetector(
+                onTap: () => widget.onSubmitted(_searchController.text),
+                child: const FaIcon(
+                  FontAwesomeIcons.magnifyingGlass,
+                  color: ColorsTheme.kBlack,
+                  size: 20.0,
+                ),
               ),
             ),
-            suffixIcon: GestureDetector(
-              onTap: () => _searchController.text = "",
-              child: const Padding(
-                padding: EdgeInsets.fromLTRB(15.0, 10.0, 0.0, 10.0),
-                child: FaIcon(FontAwesomeIcons.xmark, color: ColorsTheme.kBlack),
+            suffixIcon: Container(
+              width: 26.0,
+              alignment: Alignment.center,
+              child: GestureDetector(
+                onTap: () {
+                  _searchController.text = "";
+                  widget.onSubmitted("");
+                },
+                child: const FaIcon(
+                  FontAwesomeIcons.xmark,
+                  color: ColorsTheme.kBlack,
+                  size: 20.0,
+                ),
               ),
             ),
           ),

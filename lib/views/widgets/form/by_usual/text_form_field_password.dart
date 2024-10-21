@@ -40,7 +40,7 @@ class _TextFormFieldPasswordState extends State<TextFormFieldPassword> {
           ),
           suffixIcon: Padding(
             padding: const EdgeInsets.all(10.0),
-            child: InkWell(
+            child: GestureDetector(
               onTap: () => setState(() => _obscureTextPassword = !_obscureTextPassword),
               child: FaIcon(_obscureTextPassword ? FontAwesomeIcons.eye : FontAwesomeIcons.eyeSlash, color: ColorsTheme.kBlueLight),
             ),

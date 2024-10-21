@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:template_app/common/themes/borders_theme.dart';
 import 'package:template_app/common/themes/colors_theme.dart';
 import 'package:template_app/common/themes/texts_theme.dart';
 
@@ -8,13 +9,9 @@ class ButtonsTheme {
   static final ButtonStyle iconButtonSquare = IconButton.styleFrom(
     backgroundColor: ColorsTheme.kGreyLight.withOpacity(0.75),
     foregroundColor: ColorsTheme.kBlack,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(9.0),
-      side: const BorderSide(
-        color: ColorsTheme.kGreyDark,
-        width: 1.0,
-      ),
-    ),
+    fixedSize: const Size(40.0, 40.0),
+    iconSize: 20.0,
+    shape: BordersTheme.roundedRectangleBorder,
   );
 
   static final ButtonStyle iconButtonCircle = IconButton.styleFrom(
@@ -27,13 +24,7 @@ class ButtonsTheme {
   static final ButtonStyle filledButtonSquare = FilledButton.styleFrom(
     backgroundColor: ColorsTheme.kGreyLight.withOpacity(0.75),
     foregroundColor: ColorsTheme.kBlack,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(9.0),
-      side: const BorderSide(
-        color: ColorsTheme.kGreyDark,
-        width: 1.0,
-      ),
-    ),
+    shape: BordersTheme.roundedRectangleBorder,
     textStyle: TextsTheme.styleFilledButton,
   );
 
@@ -42,5 +33,12 @@ class ButtonsTheme {
     foregroundColor: ColorsTheme.kOnPrimary,
     textStyle: TextsTheme.styleFilledButton,
     elevation: 1.5,
+  );
+
+  static final ButtonStyle textButtonDefault = TextButton.styleFrom(
+    alignment: Alignment.center,
+    backgroundColor: ColorsTheme.kOnPrimary,
+    foregroundColor: ColorsTheme.kPrimary,
+    textStyle: TextsTheme.styleTextdButton,
   );
 }

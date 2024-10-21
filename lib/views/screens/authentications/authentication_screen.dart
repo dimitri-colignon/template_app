@@ -67,7 +67,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                 top: 80.0,
                 child: Column(
                   children: <Widget>[
-                    InkWell(
+                    GestureDetector(
                       onTap: () {
                         if (_swithAuthentication) return;
                         _resetForm();
@@ -81,7 +81,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                     const SizedBox(height: 20.0),
                     const RotatedText(title: "|", color: Colors.white70),
                     const SizedBox(height: 20.0),
-                    InkWell(
+                    GestureDetector(
                       onTap: () {
                         if (!_swithAuthentication) return;
                         _resetForm();
@@ -152,15 +152,13 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                             (_swithAuthentication) ? TextsConstant.kAuthenticationSignUpQuestion : TextsConstant.kAuthenticationSignInQuestion,
                             style: const TextStyle(fontSize: 12.0),
                           ),
-                          InkWell(
-                            onTap: () {
+                          TextButton(
+                            style: ButtonsTheme.textButtonDefault,
+                            onPressed: () {
                               _resetForm();
                               setState(() => _swithAuthentication = !_swithAuthentication);
                             },
-                            child: Text(
-                              (_swithAuthentication) ? "<< ${TextsConstant.kAuthenticationSignUp.toUpperCase()} >>" : "<< ${TextsConstant.kAuthenticationSignIn.toUpperCase()} >>",
-                              style: const TextStyle(color: ColorsTheme.kPrimary, fontSize: 12.0, letterSpacing: 2.0),
-                            ),
+                            child: Text(TextsConstant.kBtnText.replaceFirst("%1", (_swithAuthentication) ? TextsConstant.kAuthenticationSignUp.toUpperCase() : TextsConstant.kAuthenticationSignIn.toUpperCase())),
                           ),
                         ],
                       ),

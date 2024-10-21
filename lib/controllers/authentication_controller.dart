@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:template_app/common/constants/texts_constant.dart';
 import 'package:template_app/common/messages/snack_bar_message.dart';
 import 'package:template_app/services/storage_service.dart';
 
@@ -15,7 +16,7 @@ class AuthenticationController {
       // TODO: Traitement à faire.
 
       if (!context.mounted) return;
-      SnackBarMessage.show(context: context, message: "Logged up!");
+      SnackBarMessage.show(context: context, message: TextsConstant.kSnacBarLoggedUp);
     } catch (e) {
       rethrow;
     }
@@ -30,7 +31,7 @@ class AuthenticationController {
       // TODO: Traitement à faire.
 
       if (!context.mounted) return;
-      SnackBarMessage.show(context: context, message: "Logged in!");
+      SnackBarMessage.show(context: context, message: TextsConstant.kSnacBarLoggedIn);
     } catch (e) {
       rethrow;
     }
@@ -44,7 +45,7 @@ class AuthenticationController {
 
       await StorageService.removeKey(key: StorageService.kUserConnected);
       if (!context.mounted) return;
-      SnackBarMessage.show(context: context, message: "Logged out!");
+      SnackBarMessage.show(context: context, message: TextsConstant.kSnacBarLoggedOut);
     } catch (e) {
       rethrow;
     }

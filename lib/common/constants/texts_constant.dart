@@ -16,18 +16,27 @@ class TextsConstant {
   static const String kBtnNo = "No";
   static const String kBtnSave = "Save";
   static const String kBtnReset = "Reset";
+
+  static const String kBtnSkipIntro = "Skip Intro";
   static const String kBtnGetStarted = "Let's Get Started";
 
-  static const String kTitleScreenHome = "home";
-  static const String kTitleScreenAbout = "about";
-  static const String kTitleScreenCredits = "credits";
-  static const String kTitleScreenAccount = "account";
+  static const String kPopupBtnInformation = "Information";
+  static const String kPopupBtnDisconnection = "Disconnection";
+
+  static const String kBtnText = "<< %1 >>";
+
+  static const String kTitlePageHome = "home";
+  static const String kTitlePageFavorite = "favorite";
+  static const String kTitlePageShopping = "shopping";
+  static const String kTitlePageAccount = "account";
+
+  static const String kTitleWindowCardAbout = "about";
+  static const String kTitleWindowCardCredits = "credits";
 
   static const String kTitleScreenFormDivers = "form test";
 
   static const String kTooltipButtonBack = "Back";
-  static const String kTooltipButtonInformations = "Informations";
-  static const String kTooltipButtonSignOut = "Sign out";
+  static const String kTooltipButtonNotification = "Notifications";
 
   static const String kAppName = "name";
   static const String kAppVersion = "version";
@@ -46,6 +55,11 @@ class TextsConstant {
   static const String kEasyLoadingWaiting = "Waiting ...";
 
   static const String kSnacBarDataSaved = "Data is recorded!";
+  static const String kSnacBarLoggedIn = "Logged in!";
+  static const String kSnacBarLoggedUp = "Logged up!";
+  static const String kSnacBarLoggedOut = "Logged out!";
+
+  static const String kDialogMessageQuestion = "Do you want %1?";
 
   static const String kAuthenticationSignIn = "sign in";
   static const String kAuthenticationSignUp = "sign up";

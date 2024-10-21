@@ -56,7 +56,7 @@ class _SplashScreenState extends State<SplashScreen> {
       child: Scaffold(
         backgroundColor: ColorsTheme.kGreyLight,
         body: Stack(
-          children: [
+          children: <Widget>[
             const BackgroundLineTopBar(),
             Positioned(
               left: 0.0,

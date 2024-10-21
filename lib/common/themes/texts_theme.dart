@@ -22,4 +22,9 @@ class TextsTheme {
     fontWeight: FontWeight.w700,
     letterSpacing: 1.5,
   );
+
+  static const TextStyle styleTextdButton = TextStyle(
+    fontSize: 13.0,
+    letterSpacing: 2.0,
+  );
 }

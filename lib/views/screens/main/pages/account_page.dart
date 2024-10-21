@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:template_app/common/constants/texts_constant.dart';
 import 'package:template_app/common/extensions/string_extensions.dart';
 import 'package:template_app/views/widgets/scaffold/app_bar/background_app_bar.dart';
-import 'package:template_app/views/widgets/scaffold/app_bar/button_information_app_bar.dart';
-import 'package:template_app/views/widgets/scaffold/app_bar/button_sign_out_app_bar.dart';
+import 'package:template_app/views/widgets/scaffold/app_bar/button_popup_menu_app_bar.dart';
 import 'package:template_app/views/widgets/scaffold/app_bar/title_app_bar.dart';
 
 class AccountPage extends StatelessWidget {
@@ -17,8 +16,7 @@ class AccountPage extends StatelessWidget {
           children: <Widget>[
             const BackgroundAppBar(),
             const TitleAppBar(),
-            const ButtonInformationAppBar(),
-            const ButtonSignOutAppBar(),
+            const ButtonPopupMenuAppBar(),
             Positioned(
               left: 0.0,
               top: 110.0,
@@ -27,7 +25,7 @@ class AccountPage extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[Center(child: Text(TextsConstant.kTitleScreenAccount.capitalize()))],
+                  children: <Widget>[Center(child: Text(TextsConstant.kTitlePageAccount.capitalize()))],
                 ),
               ),
             ),

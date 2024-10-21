@@ -25,12 +25,19 @@ class _MainScreenState extends State<MainScreen> {
           activeIndex: _pageIndex,
           itemCount: listHomePageModel.length,
           tabBuilder: (index, isActive) {
+            final HomePageModel homePageModel = listHomePageModel[index];
             return Tooltip(
-              message: listHomePageModel[index].title.capitalize(),
-              child: Icon(
-                listHomePageModel[index].icon,
-                color: isActive ? ColorsTheme.kOnPrimary : ColorsTheme.kOnPrimary.withOpacity(0.75),
-                size: 20.0,
+              message: homePageModel.title.capitalize(),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  if (isActive) ...[
+                    Icon(homePageModel.iconActive, color: ColorsTheme.kOnPrimary, size: homePageModel.iconSize),
+                    Text(homePageModel.title.capitalize(), style: const TextStyle(color: ColorsTheme.kOnPrimary, fontSize: 10.0)),
+                  ] else ...[
+                    Icon(homePageModel.iconInactive, color: ColorsTheme.kOnPrimary.withOpacity(0.75), size: homePageModel.iconSize),
+                  ],
+                ],
               ),
             );
           },

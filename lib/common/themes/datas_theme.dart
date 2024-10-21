@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:template_app/common/themes/borders_theme.dart';
 import 'package:template_app/common/themes/colors_theme.dart';
 import 'package:template_app/common/themes/texts_theme.dart';
 
@@ -25,10 +26,19 @@ class DatasTheme {
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: ColorsTheme.kOnPrimary,
-      border: OutlineInputBorder(borderRadius: BorderRadius.circular(9.0)),
+      outlineBorder: const BorderSide(
+        color: ColorsTheme.kGreyDark,
+        width: 0.2,
+      ),
+      border: BordersTheme.outlineInputBorder,
+      enabledBorder: BordersTheme.outlineInputBorder,
       labelStyle: TextsTheme.styleInputDecorationDefault,
       hintStyle: TextsTheme.styleInputDecorationDefault,
       errorStyle: TextsTheme.styleInputDecorationError,
+      contentPadding: const EdgeInsets.symmetric(vertical: 2.0, horizontal: 2.0),
+    ),
+    popupMenuTheme: const PopupMenuThemeData(
+      color: ColorsTheme.kGreyLight,
     ),
   );
 }

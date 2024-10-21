@@ -28,7 +28,7 @@ class WindowItemLinkCard extends StatelessWidget {
               Text(name.capitalize()),
             ],
           ),
-          InkWell(
+          GestureDetector(
             onTap: () => LauncherService.launchUri(context: context, url: url),
             child: const FaIcon(FontAwesomeIcons.globe, color: ColorsTheme.kBlueLight, size: 20.0),
           ),

@@ -63,12 +63,19 @@ class PresentationPage extends StatelessWidget {
                 const SizedBox(height: 25.0),
                 Text(description, textAlign: TextAlign.center, style: const TextStyle(color: Colors.black45, fontSize: 12.0, fontWeight: FontWeight.w200)),
                 const SizedBox(height: 20.0),
-                if (withBtnNextScreen)
+                if (withBtnNextScreen) ...[
                   FilledButton(
                     style: ButtonsTheme.filledButtonDefault,
                     onPressed: () => context.go(RoutesConstant.kRouteAuthentication),
                     child: const Text(TextsConstant.kBtnGetStarted),
                   ),
+                ] else ...[
+                  TextButton(
+                    style: ButtonsTheme.textButtonDefault,
+                    onPressed: () => context.go(RoutesConstant.kRouteAuthentication),
+                    child: Text(TextsConstant.kBtnText.replaceFirst("%1", TextsConstant.kBtnSkipIntro)),
+                  ),
+                ],
               ],
             ),
           ),
